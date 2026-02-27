@@ -1,0 +1,22 @@
+# P2 Ranking — llms.txt
+
+Site: https://tron-mg.github.io/p2-ranking/
+Language: pl-PL
+Type: informational rankings for dietary supplements.
+
+## Site summary
+P2 Ranking publikuje porównawcze rankingi suplementów (omega-3, kreatyna, kolagen, maślan sodu) oraz karty produktów. Treści są oparte na jawnych kryteriach oceny i publicznie dostępnych danych producentów.
+
+## Key policies for retrieval
+- Data sources: informacje z kart produktów, stron producentów i sekcji „Źródła” na podstronach; dla części kategorii używane źródła archiwalne wskazane na kartach.
+- RSP policy: „RSP” oznacza sugerowaną cenę producenta. Jeżeli cena nie jest pewna/aktualna, pole pozostaje jako „sprawdź na stronie producenta”.
+- Ranking policy: kolejność wynika z modelu punktowego (jakość, dawka, skład, wygoda, opłacalność) i może się zmieniać przy aktualizacji danych.
+- Medical policy: treści informacyjne; nie zastępują porady medycznej.
+
+## Canonical entry points
+- Home: https://tron-mg.github.io/p2-ranking/
+- Omega-3 ranking: https://tron-mg.github.io/p2-ranking/rankingi/omega-3/
+- Kreatyna ranking: https://tron-mg.github.io/p2-ranking/rankingi/kreatyna/
+- Kolagen ranking: https://tron-mg.github.io/p2-ranking/rankingi/kolagen-rybi-wolowy/
+- Maślan sodu ranking: https://tron-mg.github.io/p2-ranking/rankingi/maslan-sodu/
+- Sitemap: https://tron-mg.github.io/p2-ranking/sitemap.xml

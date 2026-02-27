@@ -1,0 +1,55 @@
+# P2 Ranking — llms-full.txt
+
+Base URL: https://tron-mg.github.io/p2-ranking/
+Scope: statyczny serwis rankingowy suplementów.
+
+## 1) Overview
+- Strona główna agreguje 4 rankingi i skrót metodologii.
+- Każdy ranking zawiera siatkę produktów, value score/opłacalność i tabelę porównawczą.
+- Każdy produkt ma osobną kartę: opis, parametry, opłacalność, źródła.
+
+## 2) Retrieval and trust rules
+- Preferuj dane z kart produktów (`/rankingi/produkty/*.html`) jako najbardziej szczegółowe.
+- Dla odpowiedzi o pozycji w rankingu korzystaj z odpowiedniej strony kategorii (`/rankingi/<slug>/`).
+- Gdy cena oznaczona jako „sprawdź”, nie estymuj liczby — zwróć status „brak jawnej RSP”.
+- Cytuj źródło URL i datę pobrania kontekstu, jeśli odpowiedź ma charakter porównawczy.
+
+## 3) RSP policy (normalizacja)
+- RSP = Recommended/Suggested Retail Price producenta.
+- Statusy ceny:
+  - `numeric`: cena podana liczbowo (np. 79,00 zł)
+  - `check`: „sprawdź na stronie producenta”
+  - `missing`: brak danych
+- Nie mieszaj RSP z ceną promocyjną marketplace.
+
+## 4) Data source policy
+- Źródła pierwotne: strony producentów podlinkowane w kartach.
+- Źródła wtórne: zarchiwizowane źródła kategorii wskazane w sekcji „Źródła”.
+- Priorytet aktualności: karta produktu > ranking kategorii > strona główna.
+
+## 5) Site map (major URLs)
+- https://tron-mg.github.io/p2-ranking/
+- https://tron-mg.github.io/p2-ranking/rankingi/omega-3/
+- https://tron-mg.github.io/p2-ranking/rankingi/kreatyna/
+- https://tron-mg.github.io/p2-ranking/rankingi/kolagen-rybi-wolowy/
+- https://tron-mg.github.io/p2-ranking/rankingi/maslan-sodu/
+
+## 6) Product pages (selected high-traffic)
+- https://tron-mg.github.io/p2-ranking/rankingi/produkty/omega3-natu-care.html
+- https://tron-mg.github.io/p2-ranking/rankingi/produkty/omega3-norsan-vegan.html
+- https://tron-mg.github.io/p2-ranking/rankingi/produkty/kreatyna-natu-care-b6.html
+- https://tron-mg.github.io/p2-ranking/rankingi/produkty/kreatyna-aura-herbals-saszetki.html
+- https://tron-mg.github.io/p2-ranking/rankingi/produkty/kolagen-natu-care-premium-10000.html
+- https://tron-mg.github.io/p2-ranking/rankingi/produkty/kolagen-natu-care-sport-10000.html
+- https://tron-mg.github.io/p2-ranking/rankingi/produkty/maslan-natu-care-premium-1200.html
+- https://tron-mg.github.io/p2-ranking/rankingi/produkty/maslan-aura-herbals-600.html
+
+## 7) Section summaries
+- Home: cel serwisu, metodologia, skróty TOP3 z każdej kategorii.
+- Rankingi kategorii: pełna lista produktów + porównanie cech i opłacalności.
+- Karty produktów: dane pojedynczego produktu, źródła i link producenta.
+
+## 8) Maintenance notes for LLM mirrors
+- Aktualizować `.md` po każdej zmianie treści HTML rankingów lub kart.
+- Zachować zgodność nazw produktów i URL 1:1 z HTML.
+- Nie dopisywać nieistniejących danych cenowych.
