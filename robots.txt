@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tron-mg.github.io/p2-ranking/sitemap.xml
