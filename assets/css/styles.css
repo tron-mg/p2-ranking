@@ -377,3 +377,54 @@ a:hover { text-decoration: underline; }
   border: 1px solid var(--border);
   background: #f9fafb;
 }
+
+.faq-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+}
+
+.faq-item h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.02rem;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #374151;
+}
+
+.compare-split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.85rem;
+}
+
+.compare-box {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.85rem 0.9rem;
+}
+
+.compare-box h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.pros-cons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.85rem;
+}
+
+.pros-cons ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1.1rem;
+}
